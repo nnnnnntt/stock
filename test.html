@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>プルダウン</title>
+  <style>
+    /* Global Menu */
+ 
+header{
+    margin-bottom: 13em;
+    position: relative;
+    width: 100%;
+    background-color: #444;
+}
+ul > li{
+    display: inline-block;
+}
+ul > li > a{
+    padding: 15px 30px;
+    display: block;
+    font-size: 0.8em;
+    text-transform: uppercase;
+    letter-spacing: .2em;
+}
+ul > li > span{
+    margin-left: 1.2em;
+}
+ul > li:hover > a{
+    background-color: #efefef;
+    color: #444;
+}
+ 
+/* Submenu */
+ 
+ul li ul{
+    position: absolute;
+    top: 55px;
+    left: 0;
+}
+ul li ul li{
+    display: block;
+}
+ul li ul li a{
+    background-color: #efefef;
+    color: #444;
+}
+ul li ul li a:hover{
+    background-color: #ddd;
+}
+
+.sample02 ul li ul li{
+    height: 0;
+    overflow: hidden;
+}
+.sample02 ul li:hover ul li{
+    height: auto; /*サブメニューの高さ*/
+    overflow: visible;
+}
+  </style>
+</head>
+<body>
+  <header class="sample02">
+    <ul>
+        <li><a href="#">Menu01 <span>▼</span></a>
+            <ul>
+                <li><a href="#">Sub-menu01</a></li>
+                <li><a href="#">Sub-menu02</a></li>
+                <li><a href="#">Sub-menu03</a></li>
+            </ul>
+        </li>
+        <li><a href="#">Menu02</a></li>
+        <li><a href="#">Menu03</a></li>
+    </ul>
+</header>
+</body>
+</html>
